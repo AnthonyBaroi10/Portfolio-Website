@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 50px;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="my_personal_details.html">My Personal Details</a>
+  <a href="video.html">Video</a>
+  <a href="my_contact_details.html">My Contact Details</a>
+  <a href="my_hobbies.html">My Hobbies</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="change-password.html">Change Password</a>
+  <a href="logout.php">Logout</a>
+</div>
+
+<div class="main">
+
+  <style>
+    body {
+      background-image: url('333.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+    }
+    </style>
+<center>
+  <h1 style="color:rgb(9, 134, 252)"> My Personal Details</h1> 
+<input type="text" id="txt"><button onclick="editLI()">Edit</button>
+        <ul id="list">
+            <li style="color:white"> Name: Anthony Ovishek Baroi</li>
+            <br>
+            <li style="color:white">ID No: 183014052</li>
+            <br>
+            <li style="color:white">Department: CSE</li>
+            <br>
+            <li style="color:white">Semester: 10th</li>
+            <br>
+            <li style="color:white">University: ULAB</li>
+            <br>
+            <li style="color:white">Address: Mirpur-10, Dhaka, Bangladesh</li>
+            <br>
+            <li style="color:white">Contact Number: 01712311931</li>
+        </ul>
+    
+    
+  </center>
+</div>
+
+<script>
+            
+  var items = document.querySelectorAll("#list li"),
+      inputText = document.getElementById("txt"),
+       tab = [], liIndex ;
+
+// populate tab with li value
+for(var i = 0; i < items.length; i++)
+{
+   tab.push(items[i].innerHTML);
+}
+
+// get selected li into text fields and get the index
+
+for(var i = 0; i < items.length; i++)
+{
+   items[i].onclick = function(){
+       
+       inputText.value = this.innerHTML;
+       liIndex = tab.indexOf(this.innerHTML);
+       console.log(this.innerHTML +" INDEX = " + liIndex);
+       
+   };
+}
+
+function editLI()
+{
+   items[liIndex].innerHTML = inputText.value;
+   
+    // clear array
+    tab.length = 0;
+   
+    // fill array
+   for(var i = 0; i < items.length; i++)
+  {
+   tab.push(items[i].innerHTML);
+  }
+}
+  
+  
+</script>
+
+</body>
+</html>

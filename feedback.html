@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 50px;
+ 
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="my_personal_details.html">My Personal Details</a>
+  <a href="video.html">Video</a>
+  <a href="my_contact_details.html">My Contact Details</a>
+  <a href="my_hobbies.html">My Hobbies</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="change-password.php">Change Password</a>
+  <a href="logout.php">Logout</a>
+</div>
+
+<div class="main">
+  
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+
+  <h1>Feedback Form:</h1>
+
+    <div class="container">
+     
+      <h2>Q1: What do you think about my page?</h2>
+      <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> Excellent
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> Very Good
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> Good
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> Bad
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> Very Bad
+        </label>
+      </form>
+    
+
+      <h2>Q2: What more do you want to see in my page?</h2>
+      <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> More Videos
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> More Pictures
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> New Features
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> More Details About Me
+        </label>
+      </form>
+    
+
+      <h2>Q3: If you had to change something about my page what would it be?</h2>
+      <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> Background Color
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> Nothing
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> Font
+        </label>
+      </form>
+    
+
+      <h2>Please rate my page from 1-5 Star.</h2>
+      <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> 1 Star
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> 2 Star
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"> 3 Star
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> 4 Star
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" checked> 5 Star
+        </label>
+
+        <h2>Comments:</h2>
+        <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+      </form>
+    
+    </div>
+    
+</div>
+
+</body>
+</html>
+
+
+

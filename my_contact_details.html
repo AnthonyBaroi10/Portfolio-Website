@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 50px;
+ 
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="my_personal_details.html">My Personal Details</a>
+  <a href="video.html">Video</a>
+  <a href="my_contact_details.html">My Contact Details</a>
+  <a href="my_hobbies.html">My Hobbies</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="change-password.php">Change Password</a>
+  <a href="logout.php">Logout</a>
+
+</div>
+
+<div class="main">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-github {
+  background: #000000;
+  color: white;
+}
+    </style>
+   
+        <h1 style="color:white">My Contact Details</h1>
+
+        <a href="https://www.facebook.com/anthony.baroi/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/AnthonyBaroi" class="fa fa-twitter"></a>
+        <a href="https://www.gmail.com" class="fa fa-google"></a>
+        <a href="https://www.youtube.com/channel/UCtSmcXxwc4UsUk08KHbm6BA" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/anthonybaroi/" class="fa fa-instagram"></a>
+        <a href="https://github.com/AnthonyBaroi" class="fa fa-github"></a>
+          
+        <h1 style="color:white">Live Location</h1> 
+         <button onclick="getlocation();"> Show Position</button> 
+         <div id="demo" style="width: 600px; height: 400px; margin-left: 200px;"></div> 
+        
+         <script src="https://maps.google.com/maps/api/js?sensor=false"> </script> 
+         
+         <script type="text/javascript"> 
+         function getlocation(){ 
+             if(navigator.geolocation){ 
+                 navigator.geolocation.getCurrentPosition(showPos, showErr); 
+             }
+             else{
+                 alert("Sorry! your Browser does not support Geolocation API")
+             }
+         } 
+         //Showing Current Poistion on Google Map
+         function showPos(position){ 
+             latt = position.coords.latitude; 
+             long = position.coords.longitude; 
+             var lattlong = new google.maps.LatLng(latt, long); 
+             var myOptions = { 
+                 center: lattlong, 
+                 zoom: 15, 
+                 mapTypeControl: true, 
+                 navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
+             } 
+             var maps = new google.maps.Map(document.getElementById("demo"), myOptions); 
+             var markers = 
+             new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
+         } 
+   
+         //Handling Error and Rejection
+              function showErr(error) {
+               switch(error.code){
+               case error.PERMISSION_DENIED:
+              alert("User denied the request for Geolocation API.");
+               break;
+              case error.POSITION_UNAVAILABLE:
+              alert("USer location information is unavailable.");
+             break;
+             case error.TIMEOUT:
+             alert("The request to get user location timed out.");
+             break;
+            case error.UNKNOWN_ERROR:
+             alert("An unknown error occurred.");
+             break;
+            }
+         }        </script> 
+        <style>
+          body {
+            background-image: url('333.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+          }
+          </style>
+</div>
+
+</body>
+</html>
